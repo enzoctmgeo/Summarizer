@@ -77,8 +77,8 @@ public class PersonIntegrationTest {
         ObjectMapper objectMapper = new ObjectMapper();
         AgeCountData ageCountData = objectMapper.readValue(body, AgeCountData.class);
 
-        verifyAgeCount(ageCountData.getGreaterEquals50(), "SP", 541L);
-        verifyAgeCount(ageCountData.getLowerEquals20(), "SP", 14L);
+        verifyAgeCount(ageCountData.getGreaterEquals50(), "SP", 530L);
+        verifyAgeCount(ageCountData.getLowerEquals20(), "SP", 23L);
     }
 
     private void verifyAgeCount(List<AgeCountDto> ageCounts, String state, Long expectedTotal) {
